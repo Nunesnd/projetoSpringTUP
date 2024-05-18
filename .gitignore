@@ -791,4 +791,8 @@ FodyWeavers.xsd
 # Arquivos do projeto
 .SpringWeb
 
-.src/main/resources/application.properties
+src/main/resources/application.properties
+
+src/main/resources/static/*
+
+src/main/resources/static/startbootstrap-sb-admin-2-gh-pages.zip
