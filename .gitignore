@@ -789,4 +789,6 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,netbeans,visualstudio,visualstudiocode,intellij,intellij+all,intellij+iml,eclipse
 
 # Arquivos do projeto
-SpringWeb
+.SpringWeb
+
+.src/main/resources/application.properties
