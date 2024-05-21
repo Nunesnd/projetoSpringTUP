@@ -17,6 +17,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
+                            <th>Id</th>
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Login</th>
@@ -24,8 +25,19 @@
                             <th></th>
                         </tr>
                     </thead>
+                    <tbody>
+                        <tr th:each= "admin:${admin}">
+                            <td th:text="${admin.id}"></td>
+                            <td th:text="${admin.nome}"></td>
+                            <td th:text="${admin.email}"></td>
+                            <td th:text="${admin.login}"></td>
+                            <td> <a href="#" class="btn btn-warning">Alterar</a> </td>
+                            <td> <a href="#" class="btn btn-danger">Excluir</a> </td>
+                        </tr>
+                    </tbody>
                     <tfoot>
                         <tr>
+                            <th>Id</th>
                             <th>Nome</th>
                             <th>Email</th>
                             <th>Login</th>
@@ -33,22 +45,6 @@
                             <th></th>
                         </tr>
                     </tfoot>
-                    <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>email@teste.com</td>
-                            <td>Edinburgh</td>
-                            <td> <a href="#" class="btn btn-warning">Alterar</a> </td>
-                            <td> <a href="#" class="btn btn-danger">Excluir</a> </td>
-                        </tr>
-                        <tr>
-                            <td>Garrett Winters</td>
-                            <td>email@teste.com</td>
-                            <td>Tokyo</td>
-                            <td> <a href="#" class="btn btn-warning">Alterar</a> </td>
-                            <td> <a href="#" class="btn btn-danger">Excluir</a> </td>
-                        </tr>
-                    </tbody>
                 </table>
             </div>
         </div>

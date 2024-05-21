@@ -1,8 +1,5 @@
 package com.webtup.SpringWeb.models;
 
-import org.hibernate.annotations.Collate;
-import org.springframework.boot.autoconfigure.web.WebProperties.Resources.Chain.Strategy;
-
 import jakarta.persistence.*;
 
 @Entity 
@@ -19,6 +16,9 @@ public class Administrador {
 
     @Column(name = "email", length = 55, nullable = false)
     private String email;
+
+    @Column(name = "login", length = 55, nullable = false)
+    private String login;
 
     @Column(name = "senha", length = 255, nullable = false)
     private String senha;
@@ -56,6 +56,14 @@ public class Administrador {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
     }
 
     public String getObservacao() {
