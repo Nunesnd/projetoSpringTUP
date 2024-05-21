@@ -1,0 +1,39 @@
+<div th:replace="compartilhado/cabecalho"></div>
+<div class="container-fluid">
+
+    <h1 class="h3 mb-2 text-gray-800">Novo Administradores</h1>
+    <p class="mb-4">
+        Área de Administradores do sistema.
+    </p>
+
+    <div class="card shadow mb-4" style="padding: 30px;">
+
+        <form class="container" method="post" action="/admin/criar">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome completo</label>
+                <input type="text" required class="form-control" id="inputNome" name="nome">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" required class="form-control" id="inputEmail" name="email">                
+            </div>
+            <div class="mb-3">
+                <label for="login" class="form-label">Login</label>
+                <input type="text" required class="form-control" id="inputLogin" name="login">
+            </div>
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" required class="form-control" id="inputSenha" name="senha">
+            </div>
+            <div class="mb-3">
+                <label for="observacao" class="form-label">Observação</label>
+                <textarea  class="form-control" id="inputObservacao" name="observacao"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+
+    </div>
+
+</div>
+
+<div th:replace="compartilhado/rodape"></div>
