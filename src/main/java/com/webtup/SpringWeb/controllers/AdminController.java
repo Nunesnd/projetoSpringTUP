@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.webtup.SpringWeb.models.Administrador;
 import com.webtup.SpringWeb.repositorio.AdministradoresRepo;
 import org.springframework.web.bind.annotation.PostMapping;
+
 
 @Controller
 public class AdminController {
@@ -34,4 +36,11 @@ public class AdminController {
         repo.save(administrador);
         return "redirect:/admin";
     }
+
+    @GetMapping("/admin/{id}/excluir")
+    public String excluir(@PathVariable int id) {
+        repo.deleteById(id);
+        return "redirect:/admin";
+    }
+    
 }

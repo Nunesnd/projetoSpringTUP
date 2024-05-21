@@ -32,7 +32,7 @@
                             <td th:text="${admin.email}"></td>
                             <td th:text="${admin.login}"></td>
                             <td> <a href="#" class="btn btn-warning">Alterar</a> </td>
-                            <td> <a href="#" class="btn btn-danger">Excluir</a> </td>
+                            <td><a href="#" th:onclick="'if(confirm(\'Confirma ?\')) { window.location.href = \'' + @{/admin/{id}(id=${admin.id})} + '/excluir\' } '" class="btn btn-danger">Excluir</td>
                         </tr>
                     </tbody>
                     <tfoot>
